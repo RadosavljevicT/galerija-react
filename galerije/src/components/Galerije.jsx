@@ -18,7 +18,7 @@ function Galerije(props) {
 
 
                 <tbody>
-                    {galerije.map(m => {
+                    {galerije.map(g => {
                         return (
                             <tr key={g.galerija_id}>
                                 <td>{g.galerija_id}</td>

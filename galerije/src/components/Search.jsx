@@ -4,7 +4,7 @@ import Navigacija from './Navigacija';
 
 function Search() {
 
-    galerijePocetni = [
+    const galerijePocetni = [
         { galerija_id: 1, naziv: 'Louvre', adresa: 'Paris street 75001', grad: 'Paris', email: 'louvre@gmail.com', sajt: 'www.louvre.fr' },
         { galerija_id: 2, naziv: 'Narodni muzej Srbije', adresa: 'Trg Republike 1a', grad: 'Beograd', email: 'muzej@gmail.com', sajt: 'www.muzej.rs' },
         { galerija_id: 3, naziv: 'Uffizi Gallery', adresa: 'Piazzale degli Uffizi 6', grad: 'Firenze', email: 'uffizi@gmail.com', sajt: 'www.uffizi.it' },

@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.muzejitbl {
+  width: 1200px;
+  margin-top: 50px;
+  margin-left: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.spanpaginate {
+  margin-left: 900px;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchfields {
+  margin-top: 30px;
+  margin-left: 800px;
 }
 
-.App-link {
-  color: #61dafb;
+#inputsearch {
+  margin-right: 20px;
+  height: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigacija {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  margin-left: 820px;
+}
+
+.navigacija a {
+  text-decoration: none;
+  margin-left: 1%;
+  font-size: 30px;
 }
