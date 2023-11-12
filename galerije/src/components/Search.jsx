@@ -1,11 +1,10 @@
-import Galerije from "./Galerije";
 import { useState } from 'react'
-import Navigacija from "./Navigacija";
+import Galerije from './Galerije';
+import Navigacija from './Navigacija';
 
+function Search() {
 
-function Home() {
-
-    const galerijePocetni = [
+    galerijePocetni = [
         { galerija_id: 1, naziv: 'Louvre', adresa: 'Paris street 75001', grad: 'Paris', email: 'louvre@gmail.com', sajt: 'www.louvre.fr' },
         { galerija_id: 2, naziv: 'Narodni muzej Srbije', adresa: 'Trg Republike 1a', grad: 'Beograd', email: 'muzej@gmail.com', sajt: 'www.muzej.rs' },
         { galerija_id: 3, naziv: 'Uffizi Gallery', adresa: 'Piazzale degli Uffizi 6', grad: 'Firenze', email: 'uffizi@gmail.com', sajt: 'www.uffizi.it' },
@@ -23,31 +22,19 @@ function Home() {
         { galerija_id: 15, naziv: 'Galerija Matice Srpske', adresa: 'Trg galerije 1', grad: 'Novi Sad', email: 'galerija@gmail.com', sajt: 'www.galerija.rs' }
     ];
 
+    const [searchvalue, setSearchvalue] = useState('')
+    const [galerije, setGalerije] = useState(galerijePocetni)
 
-    const [galerije, setGalerije] = useState(galerijePocetni.slice(0, 5))
+    function handleSearch(e) {
+        setSearchvalue(e.target.value)
+    }
 
-    function paginacija(id) {
+    function search() {
         const niz = []
 
-        if (id == 1) {
-            for (let i = 0; i < galerijePocetni.length; i++) {
-                if (galerijePocetni[i].galerija_id >= 1 && galerijePocetni[i].galerija_id <= 5)
-                    niz.push(galerijePocetni[i])
-            }
-        }
-
-        if (id == 2) {
-            for (let i = 0; i < galerijePocetni.length; i++) {
-                if (galerijePocetni[i].galerija_id > 5 && galerijePocetni[i].galerija_id <= 10)
-                    niz.push(galerijePocetni[i])
-            }
-        }
-
-        if (id == 3) {
-            for (let i = 0; i < galerijePocetni.length; i++) {
-                if (galerijePocetni[i].galerija_id > 10 && galerijePocetni[i].galerija_id <= 15)
-                    niz.push(galerijePocetni[i])
-            }
+        for (let i = 0; i < galerijePocetni.length; i++) {
+            if (galerijePocetni[i].naziv.includes(searchvalue))
+                niz.push(galerijePocetni[i])
         }
 
         setGalerije(niz)
@@ -56,19 +43,18 @@ function Home() {
 
     return (
         <div>
+
             <Navigacija />
 
-            <Galerije galerije={galerije} />
-
-            <div className="spanpaginate">
-                <span onClick={() => paginacija(1)}>1 &nbsp;</span>
-                <span onClick={() => paginacija(2)}>2 &nbsp;</span>
-                <span onClick={() => paginacija(3)}>3 &nbsp;</span>
+            <div className="searchfields">
+                <input type="text" id="inputsearch" onChange={handleSearch} />
+                <button onClick={search} className="btn btn-primary">Search</button>
             </div>
 
+            <Galerije galerije={galerije} />
 
         </div>
     )
 }
 
-export default Home;
+export default Search;
