@@ -5,6 +5,7 @@ function Navigacija() {
         <div className='navigacija'>
             <Link to='/'>Home</Link>
             <Link to='/search'>Search</Link>
+            
         </div>
     )
 }

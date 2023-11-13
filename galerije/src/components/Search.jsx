@@ -48,7 +48,7 @@ function Search() {
 
             <div className="searchfields">
                 <input type="text" id="inputsearch" onChange={handleSearch} />
-                <button onClick={search} className="btn-primary">Search</button>
+                <button onClick={search} className="btn btn-light">Search</button>
             </div>
 
             <Galerije galerije={galerije} />
