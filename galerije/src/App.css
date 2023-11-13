@@ -1,38 +1,96 @@
 * {
   margin: 0;
   padding: 0;
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230713/pngtree-3d-rendering-of-empty-frames-on-wall-in-gallery-interior-image_3867467.jpg);
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  
 }
 
-.muzejitbl {
+ .galerijetbl {
   width: 1200px;
-  margin-top: 50px;
+  margin-top: 130px;
   margin-left: 400px;
+  background-color: #bbb;
+  background-attachment: fixed;
+  
+
+  
 }
+.tablenaslov :hover {
+  color: white;
+  background-color: rgb(76, 76, 86);
+  background-blend-mode: darken;
+}
+.tablered{
+
+  font-size: large;
+  font-style:normal;
+  font-weight:400;
+  
+  
+  
+}
+.tablered :hover {
+  color: white;
+  background-color: rgb(76, 76, 86);
+  background-blend-mode: darken;
+}
+
 
 .spanpaginate {
   margin-left: 900px;
   font-size: 22px;
   cursor: pointer;
+  color: rgb(35, 37, 39);
 }
 
 .searchfields {
-  margin-top: 30px;
+  margin-top: 150px;
   margin-left: 800px;
+  color: black;
+  
+
 }
 
+.btn-primary{
+
+  color:black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 5px;
+  
+}
+.btn-primary:hover{
+
+  color: white;
+  background-color: rgb(76, 76, 86);
+  background-blend-mode: darken;
+}
 #inputsearch {
   margin-right: 20px;
   height: 35px;
+  color: black;
 }
 
 .navigacija {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 60px;
-  margin-left: 820px;
+  /*margin-left: 820px;
+  margin-right: 1000px;*/
+  background-color:rgb(181, 175, 175);
+  border-right: 10px solid #bbb;
+  
+  
 }
 
 .navigacija a {
-  text-decoration: none;
+  text-decoration:overline;
+  
   margin-left: 1%;
   font-size: 30px;
+  color: white;
+  border-right: 4px solid #bbb;
 }

@@ -1,13 +1,15 @@
 function Galerije(props) {
 
     var galerije = props.galerije
-
     return (
         <div className="galerijetbl">
-            <table className="table table-striped" >
-                <thead>
-                    <tr>
-                        <th>ID</th>
+
+            <table className="table table-striped " >
+
+
+                <thead >
+                    <tr className="tablenaslov">
+                        <th className = "proba">ID</th>
                         <th>Naziv</th>
                         <th>Adresa</th>
                         <th>Grad</th>
@@ -17,7 +19,7 @@ function Galerije(props) {
                 </thead>
 
 
-                <tbody>
+                <tbody className = "tablered">
                     {galerije.map(g => {
                         return (
                             <tr key={g.galerija_id}>
